@@ -24,7 +24,7 @@ public class TodoService {
     }
 
     public void validate(TodoEntity entity){
-        if (entity.getId() == null){
+        if (entity == null){
             log.warn("Entity cannot be null");
             throw new RuntimeException("Entity cannot be null");
         }
@@ -40,7 +40,7 @@ public class TodoService {
 
         repository.save(entity);
 
-        log.info("Entity Id: () is saved.", entity.getId());
+        log.info("Entity Id: {} is saved.", entity.getId());
         return repository.findByUserId(entity.getUserId());
     }
 }

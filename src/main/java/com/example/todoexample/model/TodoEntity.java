@@ -25,12 +25,14 @@ public class TodoEntity {
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     private String id;
+
     private String userId;
+
     private String title;
     @Nullable
-    private Date from;
+    private Date fromdt;
     @Nullable
-    private Date to;
+    private Date todt;
     private boolean done;
 
 
