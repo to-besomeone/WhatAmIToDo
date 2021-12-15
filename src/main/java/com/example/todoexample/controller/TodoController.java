@@ -32,10 +32,10 @@ public class TodoController {
             TodoEntity entity = TodoDTO.toEntity(dto);
 
             // (2) id를 null로 초기화
-            // entity.setId(null);
+            entity.setId(null);
 
             // (3) 임시 사용자 아이디 설정. (인증 구현 뒤 수정)
-            entity.setUserId(tempUserId);
+            entity.setUserid(tempUserId);
 
             // (4) 서비스를 이용해 TodoEntity 생성
             List<TodoEntity> entities = todoService.createTodo(entity);

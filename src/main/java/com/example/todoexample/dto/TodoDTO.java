@@ -14,7 +14,6 @@ import java.util.Date;
 @Data
 public class TodoDTO {
     private String id;
-    private String userId;
     private String title;
     @Nullable
     private Date from;

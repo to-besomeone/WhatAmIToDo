@@ -29,7 +29,7 @@ public class TodoService {
             throw new RuntimeException("Entity cannot be null");
         }
 
-        if (entity.getUserId() == null){
+        if (entity.getUserid() == null){
             log.warn("Unknown user.");
             throw new RuntimeException("UserId cannot be null");
         }
@@ -41,6 +41,6 @@ public class TodoService {
         repository.save(entity);
 
         log.info("Entity Id: {} is saved.", entity.getId());
-        return repository.findByUserId(entity.getUserId());
+        return repository.findByUserId(entity.getUserid());
     }
 }

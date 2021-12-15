@@ -12,6 +12,6 @@ public interface TodoRepository extends JpaRepository<TodoEntity, String> {
 //    JpaRepository<T, Id>
 //    T : 테이블에 매핑될 엔티티 클래스;
 //    Id : 엔티티의 기본 키의 타입;
-    @Query(value="select * from Todo where userId = ?1", nativeQuery=true)
+    @Query(value="select * from Todo where userid = ?1", nativeQuery=true)
     List<TodoEntity> findByUserId(String userId);
 }

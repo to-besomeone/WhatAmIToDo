@@ -1,6 +1,5 @@
 package com.example.todoexample.model;
 
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,7 +25,7 @@ public class TodoEntity {
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     private String id;
 
-    private String userId;
+    private String userid;
 
     private String title;
     @Nullable
